@@ -1,8 +1,9 @@
-
-function TodoCounter() {
-    return (
-        <h1>Has completado 3 de 5 tareas</h1>
-    );
+function TodoCounter({ total, completed }) {
+  return (
+    <h1>
+      Has completado {completed} de {total} tareas
+    </h1>
+  );
 }
 
 export { TodoCounter };
