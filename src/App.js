@@ -1,8 +1,8 @@
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { TodoItem } from "./TodoItem";
-import { CreateTodoButton } from "./CreateTodoButton";
+import { TodoCounter } from "./Components/TodoCounter/TodoCounter";
+import { TodoSearch } from "./Components/TodoSearch/TodoSearch";
+import { TodoList } from "./Components/TodoList/TodoList";
+import { TodoItem } from "./Components/TodoItem/TodoItem";
+import { CreateTodoButton } from "./Components/CreateTodoButton/CreateTodoButton";
 import "./App.css";
 
 const defaultTodos = [
@@ -15,20 +15,26 @@ const defaultTodos = [
 function App() {
   return (
     <>
-      <TodoCounter completed={16} total={25} />
-      <TodoSearch />
+      <div id="addTaskContainer">
+        <span>Create a new task</span>
+        <h3>Task name</h3>
+        <input id="createTaskInput" placeholder="Take a dance class" />
+        <CreateTodoButton />
+      </div>
+      <div id="taskListContainer">
+        <TodoCounter completed={16} total={25} />
+        <TodoSearch />
 
-      <TodoList>
-        {defaultTodos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-          />
-        ))}
-      </TodoList>
-
-      <CreateTodoButton />
+        <TodoList>
+          {defaultTodos.map((todo) => (
+            <TodoItem
+              key={todo.text}
+              text={todo.text}
+              completed={todo.completed}
+            />
+          ))}
+        </TodoList>
+      </div>
     </>
   );
 }
