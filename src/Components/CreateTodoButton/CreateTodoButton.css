@@ -1,6 +1,9 @@
 #createTaskButton {
     background-color: aqua;
-    border-color: transparent;
+    border-color: aqua;
     border-radius: 8px;
+    padding: 0 10px 0 10px;
     height: 30px;
+    font-weight: bold;
 }
+

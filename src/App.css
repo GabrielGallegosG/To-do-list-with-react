@@ -1,24 +1,39 @@
 #addTaskContainer {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
   background-color: white;
-  height: 90%;
-  width: 35%;
   border-radius: 15px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 35px;
+  margin-left: 50px;
 }
 
-#createTaskInput {
+#title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+#inputText {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#taskInput {
   width: 100%;
   height: 35px;
-  border-radius: 10px;
+  font-size: 16px;
+  border-radius: 5px;
   background-color: #f2f2f2;
-  border-color: transparent;
+  border-color: black;
+  margin: 5px 0 15px 0;
+  padding: 0 10px 0 10px;
 }
 
 #taskListContainer {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  padding: 0 150px 0 150px;
 }

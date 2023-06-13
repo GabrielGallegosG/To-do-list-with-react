@@ -2,9 +2,9 @@ import "./TodoCounter.css"
 
 function TodoCounter({ total, completed }) {
   return (
-    <h1>
-      Has completado {completed} de {total} tareas
-    </h1>
+    <span id="counterText">
+      You have completed {completed} of {total} tasks
+    </span>
   );
 }
 

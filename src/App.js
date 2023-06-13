@@ -16,9 +16,9 @@ function App() {
   return (
     <>
       <div id="addTaskContainer">
-        <span>Create a new task</span>
-        <h3>Task name</h3>
-        <input id="createTaskInput" placeholder="Take a dance class" />
+        <span id="title">Create a new task</span>
+        <span id="inputText">Task name</span>
+        <input id="taskInput" placeholder="Take a dance class" />
         <CreateTodoButton />
       </div>
       <div id="taskListContainer">

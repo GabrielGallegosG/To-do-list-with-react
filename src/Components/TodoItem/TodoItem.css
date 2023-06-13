@@ -1,7 +1,10 @@
 #toDoItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:lemonchiffon;
-    border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: lemonchiffon;
+  border-radius: 10px;
+  margin: 7px 0 7px 0;
+  padding: 0 25px 0 25px;
 }

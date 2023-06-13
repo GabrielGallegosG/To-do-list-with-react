@@ -1,5 +1,7 @@
+import "./TodoSearch.css"
+
 function TodoSearch() {
-  return <input placeholder="Busca una tarea" />;
+  return <input id="taskInput" placeholder="Search for a task" />;
 }
 
 export { TodoSearch };

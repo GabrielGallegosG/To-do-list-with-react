@@ -1,6 +1,6 @@
-h1 {
-    font-size: 24px;
+#counterText {
+    font-size: 22px;
+    font-weight: 700;
     text-align: center;
-    margin: 0;
-    padding: 48px;
+    margin-bottom: 20px;
 }

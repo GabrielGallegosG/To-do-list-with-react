@@ -1,5 +1,5 @@
 function TodoList(props) {
-  return <ul>{props.children}</ul>;
+  return <ul id="list" style={{padding: 0}}>{props.children}</ul>;
 }
 
 export { TodoList };
