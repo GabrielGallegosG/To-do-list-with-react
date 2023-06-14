@@ -22,6 +22,7 @@ function App() {
         <CreateTodoButton />
       </div>
       <div id="taskListContainer">
+        <span id="tasksSpan">Task List</span>
         <TodoCounter completed={16} total={25} />
         <TodoSearch />
 
