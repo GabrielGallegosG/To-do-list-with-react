@@ -1,11 +1,13 @@
 import "./TodoItem.css"
+import { FiTrash2 } from "react-icons/fi";
+import { FiCircle } from "react-icons/fi";
 
 function TodoItem(props) {
   return (
     <li id="toDoItem">
-      <span>V</span>
+      <FiCircle size={24} />
       <p>{props.text}</p>
-      <span>X</span>
+      <FiTrash2 size={24} />
     </li>
   );
 }

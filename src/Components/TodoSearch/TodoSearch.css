@@ -1,0 +1,14 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .searchIcon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
