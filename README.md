@@ -1,7 +1,7 @@
-#To-Do List en React
+# To-Do List en React
 Este repositorio contiene una aplicación de lista de tareas hecha en React. Fue un proyecto personal que realicé para aprender y practicar el uso de React.
 
-##Funcionalidades
+## Funcionalidades
 La aplicación de lista de tareas tiene las siguientes funcionalidades:
 
 **Crear tareas:** Puedes agregar nuevas tareas a la lista utilizando el formulario de creación de tareas.
@@ -11,7 +11,7 @@ La aplicación de lista de tareas tiene las siguientes funcionalidades:
 **Marcar tareas como completadas:** Las tareas se pueden marcar como completadas utilizando el botón correspondiente.
 **Contador de tareas:** Un contador en la parte superior de la lista muestra el número total de tareas y la cantidad de tareas completadas.
 
-##Instalación
+## Instalación
 Para probar o utilizar esta aplicación en tu propio entorno de desarrollo, sigue los siguientes pasos:
 
 1. Clona este repositorio en tu máquina local o descarga el archivo ZIP.
@@ -28,7 +28,7 @@ Para probar o utilizar esta aplicación en tu propio entorno de desarrollo, sigu
 
 6. La aplicación se ejecutará en tu navegador en la dirección http://localhost:3000.
 
-##Licencia
+## Licencia
 Este proyecto está bajo la Licencia MIT. Puedes ver el archivo LICENSE para más detalles.
 
 ¡Espero que encuentres útil esta aplicación de lista de tareas en React! Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue en este repositorio. ¡Gracias por tu interés!

@@ -7,7 +7,7 @@ import { CreateTodoButton } from "./Components/CreateTodoButton/CreateTodoButton
 import "./App.css";
 
 const defaultTodos = [
-  { text: "Tomar el curso de React.js", completed: true },
+  { text: "Tomar el curso de React.js", completed: false },
   { text: "Sacar a pasear al perro", completed: false },
   { text: "Terminar el proyecto de React", completed: false },
   { text: "Crear un perfil de LinkedIn", completed: false },
@@ -25,6 +25,20 @@ function App() {
     const searchText = searchValue.toLowerCase();
     return taskText.includes(searchText);
   })
+
+  const completeTask = (text) => {
+    const newTasks = [...tasks];
+    const taskIndex = newTasks.findIndex((task) => task.text === text);
+    newTasks[taskIndex].completed = true;
+    setTasks(newTasks);
+  }
+
+  const deleteTask = (text) => {
+    const newTasks = [...tasks];
+    const taskIndex = newTasks.findIndex((task) => task.text === text);
+    newTasks.splice(taskIndex, 1);
+    setTasks(newTasks);
+  }
 
   return (
     <>
@@ -45,6 +59,8 @@ function App() {
               key={todo.text}
               text={todo.text}
               completed={todo.completed}
+              onComplete={() => completeTask(todo.text)}
+              onDelete={() => deleteTask(todo.text)}
             />
           ))}
         </TodoList>
