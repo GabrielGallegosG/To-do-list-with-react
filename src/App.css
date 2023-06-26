@@ -1,12 +1,18 @@
+#mainContainer {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  padding: 35px;
+  background-color: rgb(209, 250, 250);
+}
+
 #addTaskContainer {
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-items: flex-start;
   background-color: white;
   border-radius: 15px;
   padding: 35px;
-  margin-left: 50px;
 }
 
 #title {
@@ -31,11 +37,16 @@
   padding: 0 10px 0 10px;
 }
 
+#buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
 #taskListContainer {
   display: flex;
-  flex-direction: column;
   flex: 1;
-  padding: 0 150px 0 150px;
+  flex-direction: column;
+  padding: 35px;
 }
 
 #tasksSpan {

@@ -8,3 +8,7 @@
   margin: 7px 0 7px 0;
   padding: 0 25px 0 25px;
 }
+
+.task-checked {
+  text-decoration: line-through;
+}
