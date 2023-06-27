@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: lemonchiffon;
+  background-color: white;
   border-radius: 10px;
   margin: 7px 0 7px 0;
   padding: 0 25px 0 25px;
@@ -11,4 +11,14 @@
 
 .task-checked {
   text-decoration: line-through;
+}
+
+.circle-icon:hover,
+.circle-icon:active {
+  color: #00FF00;
+}
+
+.trash-icon:hover,
+.trash-icon:active {
+  color: red;
 }

@@ -5,12 +5,12 @@ function TodoItem(props) {
   return (
     <li id="toDoItem">
       {props.completed ? (
-        <FiCheckCircle size={24} onClick={props.onComplete} />
+        <FiCheckCircle color="#00FF00" size={24} onClick={props.onComplete} />
       ) : (
-        <FiCircle size={24} onClick={props.onComplete} />
+        <FiCircle size={24} onClick={props.onComplete} className="circle-icon"/>
       )}
       <p className={props.completed && "task-checked"}>{props.text}</p>
-      <FiTrash2 size={24} onClick={props.onDelete} />
+      <FiTrash2 size={24} onClick={props.onDelete} className="trash-icon" />
     </li>
   );
 }
