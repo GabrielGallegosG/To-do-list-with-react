@@ -3,6 +3,9 @@ import { TodoCounter } from "../TodoCounter/TodoCounter";
 import { TodoSearch } from "../TodoSearch/TodoSearch";
 import { TodoList } from "../TodoList/TodoList";
 import { TodoItem } from "../TodoItem/TodoItem";
+import { TasksLoading } from "../TasksLoading/TasksLoading";
+import { TasksError } from "../TasksError/TasksError";
+import { EmptyTasks } from "../EmptyTasks/EmptyTasks";
 import { CreateTodoButton } from "../CreateTodoButton/CreateTodoButton";
 import "./App.css";
 import { useLocalStorage } from "./useLocalStorage";
@@ -57,10 +60,10 @@ function App() {
         <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
         <TodoList>
-          {loading && <p>Cargando...</p>}
-          {error && <p>¡Error!</p>}
+          {loading && <TasksLoading />}
+          {error && <TasksError />}
           {!loading && searchedTasks.length === 0 && (
-            <p>No hay tareas para mostrar</p>
+            <EmptyTasks />
           )}
           {searchedTasks.map((todo) => (
             <TodoItem
