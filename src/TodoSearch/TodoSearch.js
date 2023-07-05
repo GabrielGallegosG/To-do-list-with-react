@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./TodoSearch.css";
 import { FiSearch } from "react-icons/fi";
+import { ToDoContext } from "../ToDoContext/ToDoContext";
 
-function TodoSearch({ searchValue, setSearchValue }) {
+function TodoSearch() {
+  const { searchValue, setSearchValue } = useContext(ToDoContext);
+
   return (
     <div className="searchContainer">
       <input
@@ -13,7 +16,7 @@ function TodoSearch({ searchValue, setSearchValue }) {
           setSearchValue(event.target.value);
         }}
       />
-        <FiSearch size={24} className="searchIcon" />
+      <FiSearch size={24} className="searchIcon" />
     </div>
   );
 }

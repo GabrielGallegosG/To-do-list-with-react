@@ -1,9 +1,13 @@
-import "./TodoCounter.css"
+import { useContext } from "react";
+import "./TodoCounter.css";
+import { ToDoContext } from "../ToDoContext/ToDoContext";
 
-function TodoCounter({ total, completed }) {
+function TodoCounter() {
+  const { completedTasks, totalTasks } = useContext(ToDoContext);
+
   return (
     <span id="counterText">
-      You have completed {completed} of {total} tasks
+      You have completed {completedTasks} of {totalTasks} tasks
     </span>
   );
 }
