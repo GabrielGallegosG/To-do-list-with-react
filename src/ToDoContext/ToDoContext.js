@@ -11,6 +11,7 @@ const ToDoProvider = ({ children }) => {
     error,
   } = useLocalStorage("TODOS_V1", []);
   const [searchValue, setSearchValue] = useState("");
+  const [openModal, setOpenModal] = useState(false);
 
   const completedTasks = tasks.filter((tasks) => !!tasks.completed).length;
   const totalTasks = tasks.length;
@@ -47,6 +48,8 @@ const ToDoProvider = ({ children }) => {
         searchedTasks,
         completeTask,
         deleteTask,
+        openModal,
+        setOpenModal,
       }}
     >
       {children}
