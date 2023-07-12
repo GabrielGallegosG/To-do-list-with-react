@@ -1,14 +1,24 @@
 .searchContainer {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .searchIcon {
-    position: absolute;
-    right: 10px;
-    top: 40%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  border-color: black;
+  margin: 5px 0 15px 0;
+  padding: 0 10px 0 10px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

@@ -9,7 +9,7 @@ function TodoSearch() {
   return (
     <div className="searchContainer">
       <input
-        id="taskInput"
+        className="input"
         placeholder="Search for a task"
         value={searchValue}
         onChange={(event) => {
