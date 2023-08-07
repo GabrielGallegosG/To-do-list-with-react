@@ -2,7 +2,7 @@ import React from "react";
 
 const EmptyTasks = () => {
     return(
-        <p>No hay tareas para mostrar</p>
+        <p>There are no tasks to display</p>
     );
 };
 
