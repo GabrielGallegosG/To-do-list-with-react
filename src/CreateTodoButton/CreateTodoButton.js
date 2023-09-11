@@ -11,7 +11,6 @@ function CreateTodoButton() {
       </button>
     </div>
   );
-  // return <button id="createTaskButton" onClick={() => setOpenModal(state => !state)}>Create task</button>;
 }
 
 export { CreateTodoButton };

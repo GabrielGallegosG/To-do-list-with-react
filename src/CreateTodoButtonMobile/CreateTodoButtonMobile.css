@@ -1,0 +1,37 @@
+.createTaskButtonMobile {
+  background-color: rgb(255, 133, 81);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 50px;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  font-weight: bold;
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 64px;
+  z-index: 1;
+
+  transform: rotate(0);
+  transition: 0.3s ease;
+}
+
+.createTaskButtonMobile:hover {
+  transform: rotate(224deg);
+}
+
+@media (max-width: 768px) {
+  .createTaskButtonMobile {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .createTaskButtonMobile {
+    display: none;
+  }
+}
