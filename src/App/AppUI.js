@@ -8,7 +8,7 @@ import { ToDoContext } from "../ToDoContext/ToDoContext";
 import { TodoFormMobile } from "../TodoFormMobile/TodoFormMobile";
 
 const AppUI = () => {
-  const { openModal, setOpenModal } = React.useContext(ToDoContext);
+  const { openModal } = React.useContext(ToDoContext);
   return (
     <div className="screen">
       <div className="createTaskContainer">
@@ -16,10 +16,12 @@ const AppUI = () => {
         <TaskForm />
       </div>
       <TaskListContainer />
-      <CreateTodoButtonMobile setOpenModal={setOpenModal} />
-      {openModal && <Modal>
-        <TodoFormMobile setOpenModal={setOpenModal} />
-        </Modal>}
+      <CreateTodoButtonMobile />
+      {openModal && (
+        <Modal>
+          <TodoFormMobile />
+        </Modal>
+      )}
     </div>
   );
 };

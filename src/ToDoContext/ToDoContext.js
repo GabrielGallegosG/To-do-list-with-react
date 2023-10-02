@@ -22,6 +22,15 @@ const ToDoProvider = ({ children }) => {
     return taskText.includes(searchText);
   });
 
+  const addTask = (text) => {
+    const newTasks = [...tasks];
+    newTasks.push({
+      text,
+      completed: false,
+    });
+    saveTasks(newTasks);
+  };
+
   const completeTask = (text) => {
     const newTasks = [...tasks];
     const taskIndex = newTasks.findIndex((task) => task.text === text);
@@ -46,6 +55,7 @@ const ToDoProvider = ({ children }) => {
         searchValue,
         setSearchValue,
         searchedTasks,
+        addTask,
         completeTask,
         deleteTask,
         openModal,
