@@ -32,8 +32,8 @@ form {
   
   textarea::placeholder {
     color: #A5A5A5;
-    font-family: 'Montserrat';
     font-weight: 400;
+    font-size: 18;
   }
   
   textarea:focus {
@@ -51,14 +51,12 @@ form {
   .TodoFormMobile-button {
     cursor: pointer;
     display: inline-block;
-    font-size: 20px;
-    color: #202329;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 16px;
     width: 120px;
     height: 48px;
     border-radius: 2px;
     border: none;
-    font-family: 'Montserrat';
   }
   
   .TodoFormMobile-button--add {

@@ -18,7 +18,7 @@ const AppUI = () => {
       <TaskListContainer />
       <CreateTodoButtonMobile setOpenModal={setOpenModal} />
       {openModal && <Modal>
-        <TodoFormMobile />
+        <TodoFormMobile setOpenModal={setOpenModal} />
         </Modal>}
     </div>
   );
