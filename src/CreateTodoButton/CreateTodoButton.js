@@ -8,11 +8,12 @@ function CreateTodoButton({ newTaskValue, setNewTaskValue }) {
     <div>
       <button
         className="button"
-        onClick={(event) => {
-          if (newTaskValue !== "") {
+        onClick={() => {
+          if (newTaskValue.trim() !== "") {
             addTask(newTaskValue);
             setNewTaskValue("");
-            event.preventDefault();
+          } else {
+            setNewTaskValue("");
           }
         }}
       >

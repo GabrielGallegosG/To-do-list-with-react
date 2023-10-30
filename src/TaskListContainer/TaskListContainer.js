@@ -2,7 +2,6 @@ import React from "react";
 import "./TaskListContainer.css";
 import { TodoCounter } from "../TodoCounter/TodoCounter";
 import { TodoSearch } from "../TodoSearch/TodoSearch";
-import { TodoList } from "../TodoList/TodoList";
 import { TasksLoading } from "../TasksLoading/TasksLoading";
 import { TasksError } from "../TasksError/TasksError";
 import { EmptyTasks } from "../EmptyTasks/EmptyTasks";
@@ -12,13 +11,19 @@ import { ToDoContext } from "../ToDoContext/ToDoContext";
 const TaskListContainer = () => {
   const { loading, error, searchedTasks, completeTask, deleteTask } =
     React.useContext(ToDoContext);
+
+  const taskListStyle = {
+    maxHeight: "100%",
+    overflowY: "auto",
+  };
+
   return (
     <div className="container">
       <span className="title">Task List</span>
       <TodoCounter />
       <TodoSearch />
 
-      <TodoList>
+      <div className="task-list" style={taskListStyle}>
         {loading && <TasksLoading />}
         {error && <TasksError />}
         {!loading && searchedTasks.length === 0 && <EmptyTasks />}
@@ -31,7 +36,7 @@ const TaskListContainer = () => {
             onDelete={() => deleteTask(todo.text)}
           />
         ))}
-      </TodoList>
+      </div>
     </div>
   );
 };

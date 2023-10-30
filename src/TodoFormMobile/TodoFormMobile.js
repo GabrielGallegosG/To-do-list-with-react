@@ -10,10 +10,13 @@ function TodoFormMobile() {
   const onCancel = () => setOpenModal(false);
 
   const onSubmit = (event) => {
-    if (newTaskValue !== "") {
+    event.preventDefault();
+
+    if (newTaskValue.trim() !== "") {
       addTask(newTaskValue);
-      event.preventDefault();
       setOpenModal(false);
+    }else {
+      setNewTaskValue("");
     }
   };
 
@@ -31,7 +34,6 @@ function TodoFormMobile() {
       />
       <div className="TodoFormMobile-buttonContainer">
         <button
-          type=""
           className="TodoFormMobile-button TodoFormMobile-button--cancel"
           onClick={onCancel}
         >
