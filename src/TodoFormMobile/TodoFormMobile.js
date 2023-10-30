@@ -10,9 +10,11 @@ function TodoFormMobile() {
   const onCancel = () => setOpenModal(false);
 
   const onSubmit = (event) => {
-    addTask(newTaskValue);
-    event.preventDefault();
-    setOpenModal(false);
+    if (newTaskValue !== "") {
+      addTask(newTaskValue);
+      event.preventDefault();
+      setOpenModal(false);
+    }
   };
 
   const onChange = (event) => {

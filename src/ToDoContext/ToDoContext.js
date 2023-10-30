@@ -23,12 +23,16 @@ const ToDoProvider = ({ children }) => {
   });
 
   const addTask = (text) => {
-    const newTasks = [...tasks];
-    newTasks.push({
-      text,
-      completed: false,
-    });
-    saveTasks(newTasks);
+    if (!tasks.some((task) => task.text === text)) {
+      const newTasks = [...tasks];
+      newTasks.push({
+        text,
+        completed: false,
+      });
+      saveTasks(newTasks);
+    } else {
+      
+    }
   };
 
   const completeTask = (text) => {
